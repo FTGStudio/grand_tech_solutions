@@ -1,0 +1,8 @@
+<% if cookies[:saved_lead] %>
+    Thanks for Signing Up!
+<% else %>
+    <%= bootstrap_form_for(@lead, layout: :inline) do |f| %>
+        <%= f.email_field :email, skip_label: true%>
+        <%= f.submit %>
+    <% end %>
+<% end %>

@@ -1,1 +1,67 @@
-@import './bootstrap_custom.scss'
+@import './bootstrap_custom.scss';
+
+
+.hero {
+    width: 100%;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: hsla(0, 0%, 0%, .25);
+    }
+}
+
+
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+}
+.bgimage {
+    width:100%;
+    height:500px;
+    background: url("https://d5t73r6km0hzm.cloudfront.net/325+Rwanda+RWHS+children.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+    position: relative;
+}
+  
+.bgimage h5, .bgimage h1 {
+    color:white;
+    text-shadow:2px 2px #333;
+}
+
+.spacer {
+    width: 10% !important;
+}
+
+.title-text {
+    width: 80% !important;
+}
+
+.center-header{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+
+  

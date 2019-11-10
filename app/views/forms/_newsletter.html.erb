@@ -3,6 +3,6 @@
 <% else %>
     <%= bootstrap_form_for(@lead, layout: :inline) do |f| %>
         <%= f.email_field :email, skip_label: true%>
-        <%= f.submit %>
+        <%= f.submit "Subscribe", class: "btn btn-secondary ml-2"%>
     <% end %>
 <% end %>

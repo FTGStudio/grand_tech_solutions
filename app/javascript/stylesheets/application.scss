@@ -3,12 +3,13 @@
 
 .hero {
     width: 100%;
-    height: 350px;
+    height: 1000px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+    background-image: url("../images/smart-home-2769210_1280.jpg");
 
     &::before {
         content: "";
@@ -35,7 +36,7 @@
 .bgimage {
     width:100%;
     height:500px;
-    background: url("https://d5t73r6km0hzm.cloudfront.net/325+Rwanda+RWHS+children.jpg");
+    background: url("");
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
@@ -63,5 +64,6 @@
     text-align: center;
 }
 
-
-  
+.form-inline{
+    justify-content: center;
+}

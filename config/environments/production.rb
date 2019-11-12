@@ -110,7 +110,7 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-  config.mailer_sender = "doranm09@gmail.com"
+  config.action_mailer.mailer_sender = "doranm09@gmail.com"
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default_url_options = { host: 'glacial-beyond-21612.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp

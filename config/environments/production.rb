@@ -117,7 +117,7 @@ Rails.application.configure do
     :enable_starttls_auto => true,
     :addess => ENV["MAILGUN_SMTP_SERVER"],
     :port => ENV["MAILGUN_SMTP_PORT"],
-    :domain => "glacial-beyond-21612.herokuapp.com",
+    :domain => "sandbox969bbdff22804a8ea08f526e48051d22.mailgun.org",
     :authentication => :plain,
     :user_name => ENV["MAILGUN_SMTP_LOGIN"],
     :password => ENV["MAILGUN_SMTP_PASSWORD"]

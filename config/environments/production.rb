@@ -109,4 +109,18 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  config.mailer_sender = "doranm09@gmail.com"
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :addess => ENV["MAILGUN_SMTP_SERVER"],
+    :port => ENV["MAILGUN_SMTP_PORT"],
+    :domain => ENV["MAILGUN_DOMAIN"],
+    :authentication => :plain,
+    :user_name => ENV["MAILGUN_SMTP_LOGIN"],
+    :password => ENV["MAILGUN_SMTP_PASSWORD"]
+  }
 end

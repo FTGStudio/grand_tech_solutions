@@ -110,13 +110,12 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-  config.action_mailer.perform_deliveries = true
   config.action_mailer.default_url_options = { host: 'glacial-beyond-21612.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :addess => ENV["MAILGUN_SMTP_SERVER"],
-    :port => 465,
-    :domain => "sandbox969bbdff22804a8ea08f526e48051d22.mailgun.org",
+    :port => 587,
+    :domain => "glacial-beyond-21612.herokuapp.com",
     :authentication => :plain,
     :user_name => ENV["MAILGUN_SMTP_LOGIN"],
     :password => ENV["MAILGUN_SMTP_PASSWORD"]

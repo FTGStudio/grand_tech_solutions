@@ -112,12 +112,14 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_mailer.default_url_options = { host: 'glacial-beyond-21612.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-    :addess => ENV["MAILGUN_SMTP_SERVER"],
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
+    :domain => 'glacial-beyond-21612.herokuapp.com',
+    :address => 'smtp.sendgrid.net',
     :port => 587,
-    :domain => "glacial-beyond-21612.herokuapp.com",
     :authentication => :plain,
-    :user_name => ENV["MAILGUN_SMTP_LOGIN"],
-    :password => ENV["MAILGUN_SMTP_PASSWORD"]
+    :enable_starttls_auto => true
   }
 end

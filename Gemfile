@@ -27,6 +27,7 @@ gem 'devise'
 gem 'postgresql'
 gem "bootstrap_form", "~> 4.0"
 gem 'listen'
+gem 'activeadmin'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

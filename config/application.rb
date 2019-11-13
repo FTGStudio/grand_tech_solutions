@@ -15,5 +15,16 @@ module GrandTechSolutions
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+    def resource_name
+      :user
+    end
+  
+    def resource
+      @resource ||= User.new
+    end
+  
+    def devise_mapping
+      @devise_mapping ||= Devise.mappings[:user]
+    end
   end
 end

@@ -114,7 +114,6 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'glacial-beyond-21612.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :enable_starttls_auto => true,
     :addess => ENV["MAILGUN_SMTP_SERVER"],
     :port => ENV["MAILGUN_SMTP_PORT"],
     :domain => "sandbox969bbdff22804a8ea08f526e48051d22.mailgun.org",

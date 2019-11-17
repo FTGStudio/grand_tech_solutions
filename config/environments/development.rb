@@ -60,14 +60,11 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  config.action_mailer.default_url_options = { host: 'glacial-beyond-21612.herokuapp.com' }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    authentication: :plain,
-    address: 'localhost',
-    port: 1025,
-    domain: 'glacial-beyond-21612.herokuapp.com',
-    user_name: '',
-    password: ''
+  config.action_mailer.default_url_options = { host: 'grandtechsolutionsgr.com' }
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :address => "localhost",
+    :port => 1025,
+    :domain => "grandtechsolutionsgr.com" 
   }
 end

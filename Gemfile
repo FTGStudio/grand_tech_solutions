@@ -28,6 +28,8 @@ gem 'postgresql'
 gem "bootstrap_form", "~> 4.0"
 gem 'listen'
 gem 'activeadmin'
+gem 'mail_form'
+gem 'simple_form'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

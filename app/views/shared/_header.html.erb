@@ -1,36 +1,42 @@
 <header>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light ">
-    <a class="navbar-brand" href="#">GrandTech Solutions</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Process</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-            </li>
-            <li class="nav-item">
-                <% if user_signed_in? %>
-                    <%= link_to destroy_user_session_path, class: 'nav-link', method: :delete do %>
-                        Logout
+        <a class="navbar-brand" href="#">GrandTech Solutions</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Process</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <% if user_signed_in? %>
+                        <%= link_to destroy_user_session_path, class: 'nav-link', method: :delete do %>
+                            Logout
+                        <% end %>
+                    <% else %>
+                        <%= link_to new_user_session_path, class: 'nav-link' do %>
+                            Login
+                        <% end %>
                     <% end %>
-                <% else %>
-                    <%= link_to new_user_session_path, class: 'nav-link' do %>
-                        Login
-                    <% end %>
-                <% end %>
-            </li>
-        </ul>
-        <button class="btn btn-sm btn-outline-secondary" type="button">Request Quote</button>
-    </div>
+                </li>
+            </ul>
+            <button class="btn btn-sm btn-outline-secondary" type="button">Request Quote</button>
+        </div>
     </nav>
+    
+        <div class="hero">
+            <div class="hero-text">
+
+            </div>
+        </div>
 </header>

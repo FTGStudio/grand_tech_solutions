@@ -26,5 +26,14 @@ module GrandTechSolutions
     def devise_mapping
       @devise_mapping ||= Devise.mappings[:user]
     end
+
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
+
+    config.middleware.use Rack::Attack
   end
 end

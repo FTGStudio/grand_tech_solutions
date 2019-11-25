@@ -31,6 +31,9 @@ gem 'activeadmin'
 gem 'mail_form'
 gem 'simple_form'
 gem 'react_on_rails', '11.3.0' # Use the exact gem version to match npm version
+gem 'active_model_serializers'
+gem 'rack-cors'
+gem 'rack-attack'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
